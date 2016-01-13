@@ -1,0 +1,24 @@
+# A slightly more complex makefile
+
+# SRC is a macro
+
+SRC = main.cpp functions.cpp
+
+# The OBJ macro is built from the SRC macro
+
+OBJ = $(SRC:.cpp=.o)
+
+# The 'main' target depends on the files in the OBJ macro
+ 
+main: $(OBJ)
+	g++ -o main $(OBJ)
+
+# Add a clean target to allow rebuilds.  When the 'clean' target is issued
+# to make, a command is issued that removes the 'main' executable and every
+# file ending with .o  The -f option indicates that the command is 'forced'
+# meaning no prompts are issued and nonexistent files should be ignored.  The
+# -r option indicates that the command should be applied recursively so
+#  directories and their contents will also be removed.
+
+clean:
+	rm -rf main *.o

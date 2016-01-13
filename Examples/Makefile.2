@@ -1,0 +1,10 @@
+# Simple makefile
+
+# Make knows how to turn a .cpp file into a .o file.  It also knows that the
+# .o file depends on the .cpp file.
+
+# A target line consists of the target name 'main', a colon, and a list of
+# dependencies (main.o, functions.o)
+
+main: main.o functions.o
+	g++ -o main main.o functions.o

@@ -1,0 +1,24 @@
+# A slightly more complex makefile
+
+# SRC is a macro
+
+SRC = main.cpp functions.cpp
+
+# The OBJ macro is built from the SRC macro.  It says 'for every element of the
+# SRC macro that ends in .cpp, create an element with the same base name but
+# has .o as a suffix.  Example : main.cpp becomes main.o, functions.cpp becomes
+# functions.o, etc.
+
+OBJ = $(SRC:.cpp=.o)
+
+# At this point, OBJ has two elements, main.o and functions.o
+#
+# The 'main' target depends on the files in the OBJ macro
+ 
+main: $(OBJ)
+	g++ -o main $(OBJ)
+
+# in the lines above, $(OBJ) is expanded to it's elements >main.o functions.o<
+#
+# main: main.o functions.o
+#       g++ -o main main.o functions.o

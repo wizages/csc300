@@ -1,0 +1,39 @@
+The files in this directory are intended to show a progression, from simple to
+more complex, of the features available using the Linux 'make' utility.
+
+The program is very simple and not important other than to provide multiple
+functional source files (main.cpp, functions.cpp) and an include file that 
+contains interface (i.e. prototypes) specification that is separate from the
+implementation.  Separating interface from implementation is important for
+a variety of reasons we'll discuss during the course of the semester.
+
+The 'make' process is enabled by two components.  First, the make utility which
+typically comes installed with any linux or unix operating system.  The second
+component is a configuration or rules file (usually named Makefile or makefile
+by convention).  The make utility will manage various aspects of preprocessing,
+compiling, and linking of source files into an executable or library.
+
+By default, the make utility will search the current directory for a file
+named makefile(1st) or Makefile(2nd).  If neither is found, an error message
+is issued:
+
+% make
+make: *** No targets specified and no makefile found.  Stop.
+
+An alternative makefile can be specified with the -f option on the make command
+line:
+
+% make -f Makefile.1
+
+By default, the 'target' to be built will be the first target found in the
+makefile.  Alternate targets can be speficied on the command line:
+
+% make clean
+
+You can mix alternate makefiles and targets:
+
+% make -f Makefile.2 clean
+
+Multiple targets can be issued as well:
+
+% make -f Makefile.6 clean all
