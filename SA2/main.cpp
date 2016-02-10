@@ -8,7 +8,7 @@ using namespace std;
 int main(int argc, char *argv[])
 {
    ifstream fin;
-   linkedList* ll;
+   linkedList<int>* ll;
 
    if (!checkArgs(argc, argv))
       return -1;

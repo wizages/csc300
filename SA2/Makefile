@@ -1,7 +1,6 @@
 SOURCE = functions.cpp \
          io.cpp \
-         main.cpp \
-         linkedList.cpp
+         main.cpp
 OBJS = $(SOURCE:.cpp=.o)
 
 #GNU C/C++ Compiler

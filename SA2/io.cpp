@@ -1,8 +1,8 @@
 #include "io.h"
 
-linkedList* fillList(ifstream& fin)
+linkedList<int>* fillList(ifstream& fin)
 {
-   linkedList *ll = new linkedList();
+   linkedList<int>*ll = new linkedList<int>();
 
    int data;
    while (fin >> data)
