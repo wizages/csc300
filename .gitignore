@@ -8,6 +8,7 @@
 *.slo
 *.lo
 *.o
+*.d
 *.obj
 *.compiled
 
@@ -36,3 +37,6 @@
 
 # Compressed
 *.tgz
+
+# Apple crap
+.DS_Store
