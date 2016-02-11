@@ -5,4 +5,5 @@
 #include "linkedList.h"
 
 linkedList<int>* fillList(ifstream& fin);
+
 #endif

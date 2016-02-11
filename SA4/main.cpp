@@ -33,6 +33,7 @@ int main( int argc, char *argv[] )
  * @return This function returns the size of the list.
  *
  ******************************************************************************/
+
 int getInputs(std::vector<std::string> &inputs)
 {
 	int size = 0, n = 0;
@@ -60,6 +61,7 @@ int getInputs(std::vector<std::string> &inputs)
  * @param[in] size   - Size of the vector.
  *
  ******************************************************************************/
+
 void convertInputs(std::vector<std::string> &inputs, int size)
 {
 	int n = 0;
