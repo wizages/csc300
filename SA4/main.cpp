@@ -29,7 +29,7 @@ int main( int argc, char *argv[] )
  *    Gets the input from the user
  *
  * @param[out] inputs - A vector that contains all of the user inputs
- *
+ *	
  * @return This function returns the size of the list.
  *
  ******************************************************************************/
@@ -257,4 +257,6 @@ int doMaths(int number1, int number2, char op)
 		return number1/number2;
 	else if(op == '^')
 		return std::pow(number1, number2);
+	else
+		return 0;
 }
