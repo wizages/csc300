@@ -1,0 +1,8 @@
+Build the program by adding the SA5.cpp file that you will submit for the SA5
+project.  The Makefile will build a main executable if you supply an SA5.cpp 
+file that includes the Node* insert(Node* root, int val) routine described in
+the SA5 project.
+
+Once you build the main executable, you can run it and a blank window will
+open.  Enter integers followed by <enter> and the program will call the insert
+routine followed by displaying the AVL tree that is created.
